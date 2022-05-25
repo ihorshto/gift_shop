@@ -5,8 +5,18 @@
 @import 'global';
 
 .header {
- background-color: #FAFAFA;
- padding: 36px 0;
+ padding-bottom: 110px;
+
+ &__top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #FAFAFA;
+  padding: 34px 0;
+  border-bottom: 1px solid $yellow;
+  z-index: 100;
+ }
 
  &__container {
   max-width: 1440px;
@@ -23,6 +33,10 @@
 }
 
 .menu {
+ &__btn {
+  display: none;
+ }
+
  &__list {
   display: flex;
   margin-left: 70px;
@@ -55,12 +69,13 @@
 }
 
 .info {
+ padding-top: 30px; 
  background-color: #F1F1F2;
 
  &__container {
   max-width: 1470px;
   width: 100%;
-  padding: 0 15px;
+  padding: 0;
   margin: 0 auto;
  }
 }
@@ -169,6 +184,7 @@
  &__items {
   margin-top: 65px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
  }
 
@@ -245,7 +261,7 @@
  &__link-left {
   color: #fff;
   background-color: #231F20;
-  padding: 13px 34px;
+  padding: 13px 35px;
  }
 
  &__link-right {
@@ -303,7 +319,8 @@
   color: #fff;
   @extend %gilroy-300;
   transition: all .3s;
-  &:hover{
+
+  &:hover {
    color: $yellow;
   }
  }
@@ -398,7 +415,7 @@
   margin-bottom: 70px;
  }
 
- &__socilas-link {
+ &__socials-link {
   margin: 0 12px;
 
   path {
